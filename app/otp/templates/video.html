@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Video{% endblock  %}
+{% block head %}<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">{% endblock  %}
+{% block body %}
+{% for i in play %}
+    <div class="container c_body">
+        <iframe class="video" src="{{i.video}}"></iframe>
+        <a href="{{i.download}}"><button class="download">Download</button></a>
+    </div>
+{% endfor %}
+{% endblock  %}
